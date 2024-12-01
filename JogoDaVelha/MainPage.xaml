@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JogoDaVelha.MainPage"
+             Title ="Jogo da Velha">
+
+    <!-- Fundo com efeito de gradiente -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="DarkSeaGreen" Offset="0.0"/>
+            <GradientStop Color="LightSeaGreen" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <!-- Definição de estilos para botões e textos -->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="BorderWidth" Value="5"/>
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Estrutura do layout da página -->
+    <Grid RowDefinitions="Auto, *, *, *, *" 
+          ColumnDefinitions="*, *, *"
+          ColumnSpacing="15" RowSpacing="15" Margin="20">
+
+        <!-- Título do Jogo -->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Jogo da Velha" 
+               FontSize="60" TextColor="Black" HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+
+        <!-- Botões do Jogo (Tabuleiro 3x3) -->
+        <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
+
+        <Button x:Name="btn20" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button x:Name="btn21" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" />
+
+        <Button x:Name="btn30" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button x:Name="btn31" Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button x:Name="btn32" Grid.Row="3" Grid.Column="2" Clicked="Button_Clicked" />
+
+    </Grid>
+
+</ContentPage>
